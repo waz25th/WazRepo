@@ -1,0 +1,14 @@
+import java.util.Scanner
+
+public class javatutorialtwo{
+    static Scanner userInput = new Scanner(System.in)
+
+    public static void main(String [] args){
+        System.out.print("your number: ");
+
+        if (userInput.hasNextInt()){
+            int numberEntered = userInput.nextInt();
+            System.out.println("you entered:" + numberEntered);
+        }
+    }
+}

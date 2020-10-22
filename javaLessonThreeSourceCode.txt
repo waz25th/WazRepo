@@ -1,0 +1,87 @@
+public class javaLessonThree{
+    public static void main(String[] args) {
+        // relational operators in Java
+        /* java has 6 relational operatots:
+        >: greater than
+        <: less than
+        == : equal to
+        =! : not equal to
+        <= : less than or equal to
+        >= greater than or equal to */
+
+        int randomNumber = (int) (Math.random() * 50); // this will give me a random number between 0 and 50
+
+        if (randomNumber < 25) {
+            System.out.println(" this random number is less than 25");
+        } else if(randomNumber > 40){
+            System.out.println("this random number is greater than 40");
+        }
+        else if(randomNumber == 16){
+            System.out.println("this random number is equal to 16");
+        }
+        else {
+            System.out.println(" nothing worked");
+        }
+/* there are six logical operators within java:
+! : converts the boolean value to its opposite i.e true to false
+& : returns true if the boolean value on the right and left are true ( evaluates both values)
+&&: returns true if both boolean values are true (evaluation stops after first false)
+| : returns true if either boolean values are true (evaluates both values) this is called the OR statement
+||: returns true if either values are true (evaluation stops after the first true)
+^: returns true if there is 1 true and 1 false
+*/
+        if(!(false)){  // if this was true instead of false, the string below would not print
+            System.out.println("i turned false in to true which is why this has printed");
+        }
+
+        if((true) && (true)){ // if the values were false && true, the string below would not print
+            System.out.println(" this only printed bevause both values are true");
+        }
+        if((false) | (true)){ // aslong as one value is true, the string below will print
+            System.out.println("\nthis only printed because one value is true"); //\n = new line
+        }
+        if((false) ^ (true)){ // aslong as one value is true and one is false
+            System.out.println("\nthis only printed because one value is true whilst the other one is false");
+        }
+       System.out.println("\nthe random number is " + randomNumber);
+
+       int valueOne = 1;
+        int valueTwo = 2;
+
+        int biggestValue = (valueOne > valueTwo) ? valueOne : valueTwo; 
+        //if value one is bigger than two, then value one will be assigned as the biggest value
+        //else value two will be assigned to biggest value
+
+        System.out.println(biggestValue);
+
+        char theGrade = 'b';
+        switch (theGrade){
+            case 'A':
+            case 'a':
+            System.out.println("Good Job");
+            break;
+
+            case 'B':
+            case 'b':
+            System.out.println("well done");
+            break;
+
+            case 'C':
+            case 'c':
+            System.out.println("OK");
+            break;
+
+            case 'D':
+            case 'd':
+            System.out.println("Satisfactory");
+            break;
+
+            default:
+            System.out.println("You Failed");
+            break;
+        }
+
+
+    
+    }
+}
